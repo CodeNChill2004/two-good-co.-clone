@@ -1,0 +1,840 @@
+/* ====================================
+   UNIVERSAL STYLES & RESET
+   ==================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML and Body base styles */
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1de;
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Text selection styling */
+*::selection {
+    color: white;
+    background-color: #080808;
+}
+
+/* ====================================
+   CUSTOM CURSOR
+   ==================================== */
+
+/* Large circular cursor element that follows mouse */
+.cursor {
+    height: 230px;
+    width: 230px;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* ====================================
+   LOCOMOTIVE SCROLL FIX
+   ==================================== */
+
+/* Prevents scrolling issues with smooth scroll library */
+html.has-scroll-smooth {
+    background: #f1f1f1de;
+    overflow: hidden;
+}
+
+/* Prevents text selection during scroll drag */
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+/* ====================================
+   NAVIGATION BAR
+   ==================================== */
+
+/* Main navigation container */
+.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+/* Left side - Logo that slides up on scroll */
+.nav-part1 {
+    height: 90px;
+    overflow: hidden;
+}
+
+.nav-part1 svg {
+    display: block;
+    height: 90px;
+}
+
+/* Navigation bar content (links and icons) */
+.nav .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Navigation links styling */
+.links {
+    padding: 10px;
+}
+
+.nav-bar .links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+/* Icons container (menu, cart) */
+.icons {
+    padding: 7px;
+    border-radius: 30px;
+    background-color: #f1f1f1de;
+}
+
+.nav-bar .icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+/* ====================================
+   PAGE 1: HERO SECTION
+   ==================================== */
+
+.page1 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 22vh;
+}
+
+/* Large heading text style */
+.page1 h1 {
+    font-weight: 600;
+    font-size: 15vw;
+    font-style: bold;
+    line-height: 16vw;
+    letter-spacing: -7px;
+}
+
+/* Hero image styling */
+.image img {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: 1vw;
+}
+
+/* ====================================
+   CONTENT SECTION: MAIN MESSAGE
+   ==================================== */
+
+/* Content container with centered text */
+.content {
+    display: block;
+    height: 60vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 125px 10px 0;
+    margin-bottom: 0;
+}
+
+/* Large heading in content section */
+.content #head {
+    font-size: 3.7vw;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+/* Paragraph text in content */
+.content p {
+    font-size: 13px;
+    margin-top: 1.5vw;
+}
+
+/* CTA (Call-to-Action) button wrapper */
+.cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 52px;
+    margin-top: 40px;
+}
+
+/* CTA link styling */
+.cta-link {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #111;
+    text-decoration: none;
+    margin-top: 3px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+/* ====================================
+   FOOTER BAR: DIVIDER
+   ==================================== */
+
+/* Decorative footer bar with text labels */
+.footer-bar {
+    border-bottom: 1.5px solid #030303;
+    display: flex;
+    margin: 0 10px 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    object-fit: scale-down;
+}
+
+/* Footer label text styling */
+.footer-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #111;
+}
+
+/* ====================================
+   PAGE 2: PRODUCT SHOWCASE
+   ==================================== */
+
+/* Product showcase container - 3 column layout */
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    margin-top: 3vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Individual product element */
+.page2 .elem {
+    height: 100%;
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Product image styling */
+.page2 .elem img {
+    height: 100%;
+    margin-top: 5px;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    justify-content: space-between;
+}
+
+/* Product details overlay container */
+.page2 .elem .dets {
+    width: 24vw;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 9;
+    background-color: transparent;
+}
+
+/* Product card styling */
+.dets .shop-card {
+    background: #e8e8e8;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+/* Shop card bar - expandable header */
+.dets .shop-card .shop-bar {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Shop bar styling - main bar with text and arrow */
+.dets .shop-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 30px;
+    font-weight: 600;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Dot indicator in shop bar */
+.dot {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+
+/* Title text in shop bar */
+.title {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* Arrow icon positioning */
+.arrow {
+    margin-left: auto;
+}
+
+/* Shop text styling */
+.shop-bar .shop {
+    font-weight: 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* ====================================
+   PRODUCT CARD BODY (Expandable Content)
+   ==================================== */
+
+/* Card body - hidden until expanded */
+.card-body {
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+    padding: 0px 10px;
+    opacity: 0;
+    height: 0;
+    gap: 10px;
+}
+
+/* Individual product in card */
+.product {
+    text-align: center;
+    width: 45%;
+    height: 150px;
+}
+
+/* Product image container */
+.product .img {
+    width: 100%;
+    max-width: 120px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Image object-fit */
+.img {
+    object-fit: contain;
+}
+
+/* Product description text */
+.product p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* ====================================
+   BELIEF SECTION: VALUES & MISSION
+   ==================================== */
+
+/* Belief section container - two column layout */
+.belief-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 35px;
+}
+
+/* Left side (empty space) */
+.left {
+    width: 70%;
+}
+
+/* Right side - text content */
+.right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Large heading in belief section */
+.heading {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+/* Shop button styling */
+.shop-btn {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    padding-bottom: 4px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.shop-btn:hover {
+    opacity: 0.6;
+}
+
+/* ====================================
+   PAGE 3: FEATURED PRODUCTS GRID
+   ==================================== */
+
+/* 4x1 grid layout for products */
+.page3 {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 120vh;
+    width: 100%;
+}
+
+/* Product parent container */
+.parent {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Child product element */
+.parent .child {
+    margin-top: 4vh 0 2vh;
+    height: 60vh;
+    width: 50vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Product image styling */
+.child img {
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Specific height/width for each product */
+#child1 img {
+    height: 550px;
+    width: 400px;
+}
+
+#child2 img {
+    height: 500px;
+    width: 400px;
+}
+
+#child3 img {
+    height: 500px;
+    width: 400px;
+}
+
+/* Product description text */
+.description {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 13vh;
+    font-size: 11px;
+}
+
+/* ====================================
+   PAGE 4: IMPACT SECTION
+   ==================================== */
+
+/* Impact page - two column layout with images */
+.impact-page {
+    padding: 60px 10px;
+    min-height: 130vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    grid-auto-flow: dense;
+    gap: 80px;
+    position: relative;
+    margin-top: 30px;
+}
+
+/* Left side - text content */
+.impact-left {
+    padding-top: 120px;
+    order: 1;
+}
+
+/* Impact page title */
+.impact-title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 50px;
+    letter-spacing: -2px;
+}
+
+/* Impact description container */
+.impact-description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Impact text paragraph */
+.impact-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Short impact text styling */
+.impact-text-short {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+/* Long impact text styling */
+.impact-text-long {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2a2a2a;
+    margin-top: 10px;
+}
+
+/* CTA button styling */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #000;
+    width: fit-content;
+}
+
+.cta-button:hover {
+    color: #3a3939;
+}
+
+/* Right side - image gallery */
+.impact-right {
+    padding-top: 120px;
+    display: flex;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    position: relative;
+    order: 2;
+}
+
+/* Image box container */
+.image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+/* First image box - fade in animation */
+.image-box-1 {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Second image box - fade in animation with delay */
+.image-box-2 {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Image styling */
+.image-box img {
+    width: 500px;
+    height: 680px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    overflow: hidden;
+    background: #e0e0e0;
+    border-radius: 2px;
+}
+
+/* ====================================
+   EMAIL SUBSCRIPTION SECTION
+   ==================================== */
+
+/* Email section container */
+.email-section {
+    margin-top: 40px;
+}
+
+/* Email section heading */
+.email-section h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #000;
+}
+
+/* Email input line with bottom border */
+.input-line {
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Email input field styling */
+.input-line input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 42px;
+    color: black;
+    font-weight: 900;
+    padding: 10px 0;
+    outline: none;
+}
+
+/* Arrow button next to input */
+.arrow {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ====================================
+   FOOTER: LINKS AND INFORMATION
+   ==================================== */
+
+/* Main footer container */
+.footer {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Footer section title */
+.footer #title {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 18px;
+}
+
+/* Left footer column - social links */
+.footer .left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Footer link styling */
+.footer .left .list {
+    margin: 4px 0;
+    font-size: 14px;
+    line-height: 0.8;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+/* Right footer column - additional links */
+.footer .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Right-aligned footer link styling */
+.footer .right .list2 {
+    font-size: 14px;
+    line-height: 0;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    text-align: right;
+}
+
+/* Center footer logo */
+.footer .center-icons #footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 6;
+}
+
+/* Footer logo dimensions */
+.center-icons #footer-logo {
+    max-width: 300px;
+    height: 280px;
+}
+
+/* ====================================
+   FOOTER BOTTOM: Copyright & Legal
+   ==================================== */
+
+/* Copyright and legal links container */
+.bottom {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 12px;
+    color: gray;
+}
+
+/* ====================================
+   FOOTER SECTION: Land Acknowledgement
+   ==================================== */
+
+/* Footer description wrapper */
+.footer .footer-desc {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Footer description paragraph */
+.footer-desc #paragraph {
+    margin-top: 13vh;
+    padding: 10px 18% 10%;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN: Mobile Devices
+   ==================================== */
+
+@media (max-width: 600px) {
+    /* PAGE 1: Mobile hero adjustments */
+    .page1 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    /* Mobile heading adjustments */
+    .page1 h1 {
+        font-size: 16vw;
+        line-height: 14vw;
+        letter-spacing: 2;
+    }
+
+    /* Mobile hero image adjustments */
+    .image img {
+        height: 26vh;
+        position: relative;
+        margin-top: 3vw;
+    }
+
+    /* CONTENT SECTION: Mobile styles */
+    .content {
+        display: inline-block;
+        height: 65vh;
+        width: 100%;
+        background-color: #f7f3f3;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 12vh;
+    }
+
+    /* Mobile heading text sizing */
+    .content #head {
+        font-size: 8vw;
+        font-weight: 900;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /* Mobile paragraph text */
+    .content p {
+        margin-top: 2vw;
+        margin-right: 20vw;
+        margin-left: 20vw;
+    }
+
+    /* PAGE 2: Mobile product layout (stack vertically) */
+    .page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3vw 3vw;
+        justify-content: space-between;
+    }
+
+    /* Mobile product element sizing */
+    .page2 .elem {
+        height: 100vh;
+        width: 100%;
+        margin-bottom: 2vh;
+        overflow: hidden;
+    }
+
+    /* Mobile product details positioning */
+    .page2 .elem .dets {
+        height: 40px;
+        width: 22vw;
+        border-radius: 30px;
+        position: absolute;
+        z-index: 9;
+        background-color: palegoldenrod;
+    }
+}
